@@ -1,0 +1,20 @@
+command: ["streamlit", "run", "app.py", "--server.port", "$DATABRICKS_APP_PORT", "--server.address", "0.0.0.0"]
+
+env:
+  # These two keys must match the resource keys you set in the app's "App resources" section.
+  - name: SERVING_ENDPOINT_NAME
+    valueFrom: rag_endpoint
+  - name: DATABRICKS_WAREHOUSE_ID
+    valueFrom: sql_warehouse
+
+  - name: RAG_CATALOG
+    value: "workspace"
+  - name: RAG_SCHEMA
+    value: "legal"
+
+  # Estimated pricing assumptions, not Databricks pricing.
+  # Left at 0.0 so the app never shows an invented cost. Set from your own pricing page.
+  - name: INPUT_COST_PER_1M_TOKENS
+    value: "0.0"
+  - name: OUTPUT_COST_PER_1M_TOKENS
+    value: "0.0"
