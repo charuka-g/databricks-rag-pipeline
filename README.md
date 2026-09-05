@@ -1,4 +1,4 @@
-# Legal Case RAG — Retrieval-Augmented Generation over U.S. Supreme Court Opinions
+# Legal Case RAG - Retrieval Augmented Generation over U.S. Supreme Court Opinions
 
 A Retrieval-Augmented Generation pipeline that answers questions about, and summarizes, U.S. Supreme
 Court cases — built end to end on **Databricks Free Edition** and fronted by a **Streamlit app**
